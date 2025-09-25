@@ -27,7 +27,7 @@
     </header>
 
 
-    <main class="z-10">
+    <main class="z-10" onclick="hideMenu()">
         <img class="h-46 w-full object-cover" src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg" alt="">
         <div class="md:w-8/10 2xl:w-6/10 m-auto rounded-md bg-white px-15 py-10">
             <div class="flex">
@@ -95,11 +95,11 @@
                 <div>
                     <h1 id="7" class="font-bold text-3xl">Kilder</h1>
                     <p>
-                        <ul class="list-disc ms-5 text-blue-600 underline underline-offset-1">
-                            <li><a href="https://www.miljodirektoratet.no/ansvarsomrader/avfall/plast-i-havet/mikroplast/">https://www.miljodirektoratet.no/ansvarsomrader/avfall/plast-i-havet/mikroplast/</a></li>
-                            <li><a href="https://naturvernforbundet.no/mikroplast-forbudet-er-vedtatt/?utm_source=chatgpt.com">https://naturvernforbundet.no/mikroplast-forbudet-er-vedtatt/?utm_source=chatgpt.com</a></li>
-                            <li><a href="https://ndla.no/r/naturfag-pb/miljogiftene-er-rundt-oss/99ed8dcb00">https://ndla.no/r/naturfag-pb/miljogiftene-er-rundt-oss/99ed8dcb00</a></li>
-                            <li><a href="https://www.nrk.no/nyheter/mikroplast-i-alle-provene-fra-nordsjo-tokt-1.17268416?utm_source=chatgpt.com">https://www.nrk.no/nyheter/mikroplast-i-alle-provene-fra-nordsjo-tokt-1.17268416?utm_source=chatgpt.com</a></li>
+                        <ul class="list-disc ms-5">
+                            <li>Miljødirektoratet. (u.å.). Mikroplast. Hentet den 25. september fra <a class="text-blue-600 underline underline-offset-1" href="https://www.miljodirektoratet.no/ansvarsomrader/avfall/plast-i-havet/mikroplast/">https://www.miljodirektoratet.no/ansvarsomrader/avfall/plast-i-havet/mikroplast/</a></li>
+                            <li>Naturvernforbundet. (u.å.). Mikroplast – forbudet er vedtatt. Hentet den 25. september fra <a class="text-blue-600 underline underline-offset-1" href="https://naturvernforbundet.no/mikroplast-forbudet-er-vedtatt/?utm_source=chatgpt.com">https://naturvernforbundet.no/mikroplast-forbudet-er-vedtatt/?utm_source=chatgpt.com</a></li>
+                            <li>NDLA. (u.å.). Miljøgiftene er rundt oss. Hentet den 25. september fra <a class="text-blue-600 underline underline-offset-1" href="https://ndla.no/r/naturfag-pb/miljogiftene-er-rundt-oss/99ed8dcb00">https://ndla.no/r/naturfag-pb/miljogiftene-er-rundt-oss/99ed8dcb00</a></li>
+                            <li>NRK. (2024, 28. januar). Mikroplast i alle prøvene fra Nordsjø-tokt. Hentet den 25. september fra <a class="text-blue-600 underline underline-offset-1" href="https://www.nrk.no/nyheter/mikroplast-i-alle-provene-fra-nordsjo-tokt-1.17268416?utm_source=chatgpt.com">https://www.nrk.no/nyheter/mikroplast-i-alle-provene-fra-nordsjo-tokt-1.17268416?utm_source=chatgpt.com</a></li>
                         </ul>
                     </p>
                 </div>
@@ -122,6 +122,12 @@
             } else {
                 menu.classList.add("opacity-0")
             }
+        }
+
+        function hideMenu() {
+            const menu = document.querySelector('#menu')
+            menu.classList.add("opacity-0")
+            menuVisible = false
         }
 
     </script>
