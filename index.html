@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikroplast</title>
-    
+    <link rel="stylesheet" href="index.css">
 </head>
 <body class="overflow-auto">
     <header class="z-20 fixed w-full">
@@ -13,7 +13,7 @@
             <h1 class="font-bold justify-self-center">Mikroplast.no</h1>
             <img class="w-8 mx-5 opacity-0" src="https://www.svgrepo.com/show/506800/burger-menu.svg" alt="">
         </nav>
-        <div id="menu" class=" opacity-0 bg-white fixed border-r-1 border-b-1 border-slate-200 w-100 rounded-br-md z-50 pb-5 pt-2 px-5">
+        <div onclick="hideMenu()" id="menu" class=" opacity-0 bg-white fixed border-r-1 border-b-1 border-slate-200 w-100 rounded-br-md z-50 pb-5 pt-2 px-5">
             <ul class="*:hover:list-disc ms-5 *:hover:underline *:hover:underline-offset-2 text-lg">
                 <li><a href="#1">Hva er miljøgifter?</a></li>
                 <li><a href="#2">Hva er mikroplast?</a></li>
@@ -125,9 +125,13 @@
         }
 
         function hideMenu() {
-            const menu = document.querySelector('#menu')
+            setTimeout(function()
+                {
+                    const menu = document.querySelector('#menu')
             menu.classList.add("opacity-0")
-            menuVisible = false
+            menuVisible = false}
+            , 20)
+            
         }
 
     </script>
